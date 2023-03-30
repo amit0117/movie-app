@@ -7,7 +7,7 @@ export default class Banner extends Component {
       // console.log("works");
     return (
         <>{
-            movie==''?<div className="spinner-border text-success" role="status">
+            movie===''?<div className="spinner-border text-success" role="status">
             <span className="sr-only">Loading...</span>
           </div>:
         <div className="card banner-card" >

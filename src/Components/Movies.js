@@ -23,7 +23,7 @@ async componentDidMount(){
   })
 }
 changeMovies=async ()=>{
-  if(this.currPage!=1){
+  if(this.currPage!==1){
   const res=await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=4421b18a6a9388ed347a64f75115ed45&language=en-US&page=${this.state.currPage}`);
   let data=res.data;
   // console.log("change movies called");
@@ -58,8 +58,10 @@ this.changeMovies();
 }
 handleFavourites=(movieObj)=>{
   let preData= JSON.parse(localStorage.getItem('movies-app')||"[]");
+  // let arr;
   if(this.state.favourites.includes(movieObj.id)){
- let arr=preData.filter((m)=>{m.id!=movieObj.id})
+    
+ let arr=preData.filter((m)=>(m.id!==movieObj.id))
    preData=arr;
     }
   else{

@@ -73,7 +73,7 @@ this.setState({
 }
 handleDelete=(id)=>{
   let arr=[]
-  arr=this.state.movies.filter((movieObj)=>id!=movieObj.id)
+  arr=this.state.movies.filter((movieObj)=>id!==movieObj.id)
   this.setState({
     movies:[...arr]
   })
